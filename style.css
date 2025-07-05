@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KO Light Blue Theme</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mint Green Theme</title>
   <style>
     :root {
-      --primary-color: #e0f0ff;
-      --accent-color: #a0d4ff;
-      --text-color: #333;
-      --header-color: #007acc;
+      --primary-color: #e6fff4;
+      --accent-color: #b2f0dc;
+      --text-color: #2e4036;
+      --header-color: #2bb673;
       --card-bg: #ffffff;
-      --shadow: rgba(0, 0, 0, 0.1);
+      --shadow: rgba(0, 0, 0, 0.08);
     }
 
     body {
@@ -26,20 +26,20 @@
       color: white;
       padding: 1rem 2rem;
       text-align: center;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
+      font-size: 2rem;
+      letter-spacing: 0.5px;
     }
 
     nav {
       background-color: var(--accent-color);
       display: flex;
       justify-content: center;
-      padding: 0.5rem 0;
+      padding: 0.75rem 0;
       gap: 2rem;
     }
 
     nav a {
-      color: #003e66;
+      color: #145c3b;
       text-decoration: none;
       font-weight: bold;
     }
@@ -56,9 +56,9 @@
 
     .card {
       background-color: var(--card-bg);
-      border-radius: 12px;
+      border-radius: 10px;
       padding: 1.5rem;
-      box-shadow: 0 4px 10px var(--shadow);
+      box-shadow: 0 3px 8px var(--shadow);
       margin-bottom: 1.5rem;
     }
 
@@ -66,40 +66,40 @@
       text-align: center;
       padding: 1rem;
       background-color: var(--accent-color);
-      color: #003e66;
+      color: #145c3b;
       margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <header>
-    KO Light Blue Themed Website
+    Mint Green Themed Website
   </header>
 
   <nav>
     <a href="#">Home</a>
     <a href="#">About</a>
-    <a href="#">Features</a>
+    <a href="#">Projects</a>
     <a href="#">Contact</a>
   </nav>
 
   <div class="container">
     <div class="card">
       <h2>Welcome</h2>
-      <p>This is a simple KO-inspired website with a soft light blue color theme for calm and clean visuals.</p>
+      <p>This is a clean and soothing mint green themed layout, great for wellness, nature, or eco-friendly projects.</p>
     </div>
     <div class="card">
       <h3>Features</h3>
       <ul>
-        <li>Responsive layout</li>
-        <li>Soft blue color palette</li>
-        <li>Card-based content design</li>
+        <li>Elegant mint green palette</li>
+        <li>Mobile-friendly layout</li>
+        <li>Minimal and modern design</li>
       </ul>
     </div>
   </div>
 
   <footer>
-    © 2025 KO Design | All rights reserved
+    © 2025 Mint Design | All rights reserved
   </footer>
 </body>
 </html>
