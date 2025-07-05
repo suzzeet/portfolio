@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Theme Website</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #ffffff;
+      border-bottom: 1px solid #333;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    a {
+      color: #90caf9;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      margin: 1rem 0;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+  <header>Dark Themed Website</header>
+  <main>
+    <div class="card">
+      <h2>Welcome!</h2>
+      <p>This is a simple dark theme template.</p>
+      <a href="#">Learn More</a>
+    </div>
+    <button>Click Me</button>
+  </main>
+</body>
+</html>
