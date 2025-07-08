@@ -1,156 +1,232 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Sujit Godar</title>
+/* ===== Variables ===== */
+:root {
+  --primary: #2a9d8f;
+  --primary-dark: #21867a;
+  --secondary: #f4f4f4;
+  --dark: #333;
+  --light: #fff;
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  --font-head: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      background-color: #f7f8fa;
-      color: #222;
-      line-height: 1.6;
-    }
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--dark);
+  background: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
 
-    header {
-      background-color: #ffffff;
-      padding: 20px 40px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
-    header .logo {
-      font-size: 22px;
-      font-weight: 600;
-      color: #007bff;
-    }
+section {
+  padding: 4rem 0;
+}
 
-    nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
+.section:nth-child(even) {
+  background: var(--secondary);
+}
 
-    nav a:hover {
-      color: #007bff;
-    }
+/* ===== Headings ===== */
+h1, h2, h3, h4 {
+  font-family: var(--font-head);
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
 
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
 
-    section {
-      background-color: #ffffff;
-      padding: 30px;
-      margin-bottom: 30px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    }
+h2 {
+  font-size: 2rem;
+}
 
-    h2 {
-      font-size: 26px;
-      margin-bottom: 15px;
-      color: #222;
-    }
+h3 {
+  font-size: 1.5rem;
+}
 
-    p {
-      font-size: 16px;
-      color: #555;
-    }
+/* ===== Navigation Bar ===== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
-    .button {
-      display: inline-block;
-      background-color: #007bff;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 15px;
-      transition: background-color 0.3s ease;
-    }
+nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
 
-    .button:hover {
-      background-color: #0056b3;
-    }
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 14px;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
 
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+nav ul li a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  position: relative;
+}
 
-      nav {
-        margin-top: 10px;
-      }
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--primary);
+}
 
-      nav a {
-        margin: 10px 10px 0 0;
-      }
+nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+}
 
-      .container {
-        padding: 0 15px;
-      }
-    }
-  </style>
-</head>
-<body>
+/* ===== Hero Section ===== */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: #f0fdfb;
+}
 
-  <header>
-    <div class="logo">Sujit Godar</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+.hero h1 {
+  color: var(--primary);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-  <main class="container">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hi! I'm Sujit Godar, an IT student passionate about building clean, functional websites using HTML, CSS, and JavaScript. I'm currently studying at NCIT and exploring the world of frontend development.</p>
-    </section>
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>Some of my recent works include portfolio websites, creative contact forms, and responsive UI layouts. I'm always learning and improving my skills through real-world projects.</p>
-    </section>
+.hero .btn {
+  font-size: 1rem;
+}
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>If you'd like to collaborate or just say hello, feel free to reach out!</p>
-      <a class="button" href="mailto:sujit@example.com">Email Me</a>
-    </section>
-  </main>
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
 
-  <footer>
-    &copy; 2025 Sujit Godar. All rights reserved.
-  </footer>
+.btn:hover {
+  background: var(--primary-dark);
+}
 
-</body>
-</html>
+/* ===== Card Layout (Skills, Projects) ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+/* ===== Contact Section ===== */
+.contact {
+  background: #e8f5f3;
+  padding: 3rem 1rem;
+}
+
+.contact h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-info a {
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  color: var(--primary);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #222;
+  color: #bbb;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive Navigation (Mobile) ===== */
+@media (max-width: 768px) {
+  nav .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  nav ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    font-size: 0.95rem;
+  }
+}
