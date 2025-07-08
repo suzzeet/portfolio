@@ -1,232 +1,229 @@
-/* ===== Variables ===== */
-:root {
-  --primary: #2a9d8f;
-  --primary-dark: #21867a;
-  --secondary: #f4f4f4;
-  --dark: #333;
-  --light: #fff;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sujit Godar | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2a9d8f;
+      --primary-dark: #21867a;
+      --secondary: #f4f4f4;
+      --dark: #333;
+      --light: #fff;
 
-  --font-head: 'Poppins', sans-serif;
-  --font-body: 'Roboto', sans-serif;
-}
+      --font-head: 'Poppins', sans-serif;
+      --font-body: 'Roboto', sans-serif;
+    }
 
-/* ===== Base Styles ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: var(--font-body);
-  font-size: 16px;
-  color: var(--dark);
-  background: #fff;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
+    body {
+      font-family: var(--font-body);
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      text-align: center;
+    }
 
-.container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
 
-section {
-  padding: 4rem 0;
-}
+    section {
+      padding: 4rem 1rem;
+    }
 
-.section:nth-child(even) {
-  background: var(--secondary);
-}
+    .section:nth-child(even) {
+      background: var(--secondary);
+    }
 
-/* ===== Headings ===== */
-h1, h2, h3, h4 {
-  font-family: var(--font-head);
-  margin-bottom: 1rem;
-  color: var(--dark);
-}
+    h1, h2, h3 {
+      font-family: var(--font-head);
+      margin-bottom: 1rem;
+    }
 
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
 
-h2 {
-  font-size: 2rem;
-}
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
 
-h3 {
-  font-size: 1.5rem;
-}
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
 
-/* ===== Navigation Bar ===== */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
 
-nav .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
+    .nav-container a {
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--dark);
+      position: relative;
+    }
 
-nav .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary);
-}
+    .nav-container a:hover,
+    .nav-container a.active {
+      color: var(--primary);
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
+    .btn {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1.5rem;
+      transition: background 0.3s;
+    }
 
-nav ul li a {
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 500;
-  position: relative;
-}
+    .btn:hover {
+      background: var(--primary-dark);
+    }
 
-nav ul li a:hover,
-nav ul li a.active {
-  color: var(--primary);
-}
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
 
-nav ul li a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 2px;
-  background: var(--primary);
-}
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
 
-/* ===== Hero Section ===== */
-.hero {
-  text-align: center;
-  padding: 6rem 1rem;
-  background: #f0fdfb;
-}
+    .contact-info a {
+      display: inline-block;
+      margin: 0.5rem;
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-.hero h1 {
-  color: var(--primary);
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
 
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+      }
 
-.hero .btn {
-  font-size: 1rem;
-}
+      h1 {
+        font-size: 2rem;
+      }
 
-/* ===== Buttons ===== */
-.btn {
-  display: inline-block;
-  background: var(--primary);
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s ease;
-}
+      h2 {
+        font-size: 1.5rem;
+      }
 
-.btn:hover {
-  background: var(--primary-dark);
-}
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
 
-/* ===== Card Layout (Skills, Projects) ===== */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-}
+  <nav>
+    <div class="nav-container">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-.card {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  text-align: center;
-}
+  <section id="home" class="section">
+    <div class="container">
+      <h1>Hi, I'm Sujit Godar</h1>
+      <p>Web Developer | IT Engineering Student</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
 
-/* ===== Contact Section ===== */
-.contact {
-  background: #e8f5f3;
-  padding: 3rem 1rem;
-}
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am passionate about coding, web design, and developing responsive websites that offer great user experience.</p>
+    </div>
+  </section>
 
-.contact h2 {
-  margin-bottom: 2rem;
-  text-align: center;
-}
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="cards">
+        <div class="card">HTML & CSS</div>
+        <div class="card">JavaScript</div>
+        <div class="card">C / C++</div>
+        <div class="card">React (Basic)</div>
+      </div>
+    </div>
+  </section>
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="cards">
+        <div class="card">Portfolio Website</div>
+        <div class="card">Basic Calculator</div>
+        <div class="card">To-do List App</div>
+      </div>
+    </div>
+  </section>
 
-.contact-info a {
-  color: var(--primary-dark);
-  text-decoration: none;
-  font-weight: 500;
-}
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <a href="mailto:sujitgodar@gmail.com">📧 Gmail</a>
+        <a href="tel:+9779800000000">📱 Phone</a>
+        <a href="https://www.facebook.com/sujitgodar" target="_blank">📘 Facebook</a>
+        <a href="https://github.com/suzzeet" target="_blank">💻 GitHub</a>
+        <a href="https://linkedin.com/in/sujitgodar" target="_blank">💼 LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
-.contact-info a:hover {
-  color: var(--primary);
-}
+  <footer>
+    &copy; 2025 Sujit Godar. All Rights Reserved.
+  </footer>
 
-/* ===== Footer ===== */
-footer {
-  background: #222;
-  color: #bbb;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-/* ===== Responsive Navigation (Mobile) ===== */
-@media (max-width: 768px) {
-  nav .nav-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  nav ul li {
-    margin-bottom: 0.5rem;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-info {
-    font-size: 0.95rem;
-  }
-}
+</body>
+</html>
