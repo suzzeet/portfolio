@@ -1,68 +1,344 @@
-<!DOCTYPE html>
-<html lang="en">
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <script src="script.js"></script>
-</head>
+body {
+    height: 100vh;
+    color: #98FF98;
+    background: linear-gradient(135deg, #f3f0ff, #f9f9fc);
+    background-image: radial-gradient(circle at top left, #f0e7ff 10%, transparent 30%), radial-gradient(circle at bottom right, #d5cfff 10%, transparent 30%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
-<body>
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 20px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-    <header>
-        <div class="logo">Sujit</div>
-        <nav>
-            <a href="Education.html">Education</a>
-            <a href="skills.html">Skills</a>
-            <a href="projects.html">Projects</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-        <a href="index.html"><button class="cta">Back Home</button></a>
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #6a0dad;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
 
-    </header>
+nav a {
+    margin: 0 18px;
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
 
-    <main>
-        <div class="content">
-           <section id="contact" class="section" style="background: #e6f7f4;">
-  <div class="container">
-    <h2>📬 Get in Touch</h2>
-    <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
-      I'm open to collaboration, freelancing, or just chatting about tech! Feel free to reach out via any platform below.
-    </p>
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 3px;
+    background: #6a0dad;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 
-    <div class="cards" style="margin-top: 3rem;">
-      <div class="card">
-        <h3>📧 Gmail</h3>
-        <p><a href="mailto:sujitgodar@gmail.com">sujitgodar@gmail.com</a></p>
-      </div>
-      <div class="card">
-        <h3>📱 Phone</h3>
-        <p><a href="tel:+977 9766612336">+977 9766612336</a></p>
-      </div>
-      <div class="card">
-        <h3>💻 GitHub</h3>
-        <p><a href="https://github.com/suzzeet" target="_blank">github.com/suzzeet</a></p>
-      </div>
-      <div class="card">
-        <h3>📘 Facebook</h3>
-        <p><a href="https://facebook.com/sujitgodar" target="_blank">facebook.com/sujitgodar</a></p>
-      </div>
-      <div class="card">
-        <h3>💼 LinkedIn</h3>
-        <p><a href="https://linkedin.com/in/sujitgodar" target="_blank">linkedin.com/in/sujitgodar</a></p>
-      </div>
-    </div>
-  </div>
-</section>
+nav a:hover {
+    color: #6a0dad;
+}
 
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
 
-        </div>
-    </main>
+.cta {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    padding: 12px 25px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(74, 0, 224, 0.3);
+}
 
-</body>
+.cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(74, 0, 224, 0.4);
+}
 
-</html>
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 60px;
+    gap: 40px;
+    height: calc(100vh - 100px);
+    overflow: auto;
+}
+
+.content {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    color: #2a004f;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.content p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+	
+	
+	
+	
+
+.content li {
+    background: #f3edff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+.content li:hover {
+    transform: scale(1.01);
+}
+
+.content li h2 {
+    font-size: 1.4em;
+    color: #4a00e0;
+    margin-bottom: 8px;
+}
+
+.content li p {
+    margin: 4px 0;
+    font-size: 1em;
+    color: #444;
+}
+
+.about {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    max-width: 1000px;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.about-image img {
+    width: 280px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #6a0dad;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding: 30px 20px;
+    }
+    .content {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .about-container {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+    .about-image img {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 20px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-container {
+    animation: fadeUp 1s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+
+body.dark-mode {
+    background: #121217;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background: rgba(18, 18, 23, 0.9);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode nav a {
+    color: #ddd;
+}
+
+body.dark-mode nav a:hover {
+    color: #bb86fc;
+}
+
+body.dark-mode .logo {
+    color: #bb86fc;
+    text-shadow: none;
+}
+
+body.dark-mode .cta {
+    background: linear-gradient(to right, #bb86fc, #3700b3);
+    box-shadow: 0 4px 10px rgba(187, 134, 252, 0.6);
+}
+
+body.dark-mode .cta:hover {
+    box-shadow: 0 6px 15px rgba(187, 134, 252, 0.8);
+}
+
+body.dark-mode .content {
+    background: #1e1e28;
+    color: #ddd;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05);
+}
+
+body,
+header,
+nav a,
+.logo,
+.cta,
+.content {
+    transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+}
+
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6a0dad;
+    padding: 5px 10px;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #dark-mode-toggle {
+    color: #bb86fc;
+}
+
+#dark-mode-toggle:focus {
+    outline: 2px solid #6a0dad;
+    outline-offset: 2px;
+}
+
+body.dark-mode,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode a {
+    color: #ddd !important;
+}
+
+body.dark-mode .content li {
+    background: #2a2a3a !important;
+    color: #ddd !important;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .content,
+body.dark-mode .about-container {
+    background: #1e1e28 !important;
+    color: #ddd !important;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.05) !important;
+}
+
+body.dark-mode strong,
+body.dark-mode b {
+    color: #fff !important;
+}
