@@ -9,7 +9,7 @@
 
 body {
   height: 100vh;
-  color: #1f1f2f;
+  color: #AAF0D1;
   background: linear-gradient(135deg, #f3f0ff, #f9f9fc);
   background-image: radial-gradient(circle at top left, #f0e7ff 10%, transparent 30%),
     radial-gradient(circle at bottom right, #d5cfff 10%, transparent 30%);
